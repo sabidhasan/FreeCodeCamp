@@ -1,0 +1,19 @@
+body {
+  font-family: Open Sans, Helvetica;
+  margin-top: 60px;
+ /* background-color:pink;*/
+}
+.container {
+  background-color:pink;
+  border-radius: 7px
+}
+.titlepicture {
+  width: 40%;
+}
+.footer {
+  margin-top: 15px;
+  padding: 10px 0 10px 0;
+}
+.text-bold {
+  font-weight: bold;
+}
