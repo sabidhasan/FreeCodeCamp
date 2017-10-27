@@ -1,0 +1,12 @@
+body {font-family: 'Playfair'; font-size: 225%; height: 100%; width: 100%}
+a, p {color: darkblue}
+
+.leftnav {background-color: #b3d2f2; text-align: left; position: absolute; top:0; bottom: 0; overflow: hidden; min-width: 150px}
+.logo-pic {width: 50%; display: block; margin: 0 auto; border-radius: 50%; margin-top: 5%}
+.nav {margin-top: 10%}
+.nav-link {display: block; padding: 15px 0 15px 20px}
+.linkss {margin-top: auto; width: 90%; position: absolute; bottom: 3%; border-top: 2px solid grey; padding-top: 5%}
+.linkss img {max-width: 15%}
+
+.content {position: absolute; left: 18%; top:0; bottom: 0; background-color: green; width: 81%}
+.content-box {position: absolute; top:0; bottom: 0; background-color: red; width: 100%}
