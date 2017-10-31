@@ -1,12 +1,43 @@
-body {font-family: 'Playfair'; font-size: 225%; height: 100%; width: 100%}
-a, p {color: darkblue}
+/*#001624 #424242 #7f1416 #374278 #abc1df
+Hexcolor tool .com*/
+body {font-family: 'Playfair'; font-size: 225%; height: 100%; overflow:hidden;  width: 100%; background-color: #001624; min-width: 900px; box-sizing: border-box;
+}
+h1 {font-size: 5em;font-weight: bold}
+h2 {font-size: 1.5em; padding: 2% 0 2% 0;}
+h3 {font-size: 1em;}
 
-.leftnav {background-color: #b3d2f2; text-align: left; position: absolute; top:0; bottom: 0; overflow: hidden; min-width: 150px}
-.logo-pic {width: 50%; display: block; margin: 0 auto; border-radius: 50%; margin-top: 5%}
-.nav {margin-top: 10%}
-.nav-link {display: block; padding: 15px 0 15px 20px}
-.linkss {margin-top: auto; width: 90%; position: absolute; bottom: 3%; border-top: 2px solid grey; padding-top: 5%}
+.leftnav {background-color: #abc1df; text-align: left; position: fixed; top:0; bottom: 0; overflow: hidden; min-width: 150px; border-right: 1px solid brown}
+.leftnav a {color: #001624}
+.logo-pic {width: 50%; max-width: 300px; display: block; margin: 0 auto; border-radius: 50%; margin-top: 5%}
+.nav {margin-top: 10%; border-top: 1px solid #7f1416}
+.nav-link {display: block; padding: 15px 0 15px 20px;}
+.nav .active {font-weight: bold}
+.nav a, .nav a:hover {text-decoration: none}
+ .linkss {margin-top: auto; width: 90%; position: absolute; bottom: 3%; border-top: 1px solid #7f1416; padding-top: 5%}
 .linkss img {max-width: 15%}
 
-.content {position: absolute; left: 18%; top:0; bottom: 0; background-color: green; width: 81%}
-.content-box {position: absolute; top:0; bottom: 0; background-color: red; width: 100%}
+.content {position: absolute; left: 16.5%; top:0; bottom: 0; background-color: #001624; width: 82.5%; opacity: 0.75}
+.content a {color: #7f1416; font-weight: bold;}
+.content-box {position: absolute; top:0; bottom: 0; width: 100%; padding: 8%; color: white}
+.content-top {margin: 0 0 0 5%}
+.content-bottom {position: fixed; bottom: 0; margin-bottom: 10%}
+
+#home {background:url('https://i.imgur.com/vLC84xf.jpg');}
+#about {background: url('https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg'); color: #001624;}
+#portfolio {background: url('https://static.pexels.com/photos/317385/pexels-photo-317385.jpeg');}
+#contact {background: url('https://static.pexels.com/photos/261599/pexels-photo-261599.jpeg');}
+#contact, #portfolio, #about, #home {background-size: cover;}
+
+table {margin: 4% 0 0 16%;}
+table img {width: 11em; padding: 10px; border-radius: 8%}
+table span {text-align: center; display: none; background-color: #001624}
+table span h1, p {font-size: 0.7em; padding: 0; margin: 0}
+table span h1 {margin-bottom: 5%}
+table td {position: relative;}
+td img:hover ~ span {display: inline; position: absolute; top: 20%; left: 15%; width: 70%;}
+
+form {width: 55%}
+label {display: block; margin: 3% 0 3% 0}
+input[type=text] {border: 2px solid #7f1416; font-size: 0.8em; float:right; background-color: #001624; color: #abc1df; font-weight: normal;}
+textarea {width: 100%; background-color: #001624; color: #abc1df; font-weight: normal; padding: .2em; border: 2px solid #7f1416; font-size: 0.6em; }
+button {border: 4px solid #7f1416; width: 50%; background-color: #001624; text-transform: uppercase; padding: 5px}

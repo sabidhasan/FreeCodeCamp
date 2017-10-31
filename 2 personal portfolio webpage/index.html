@@ -7,7 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css?family=Playfair" rel="stylesheet">
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
+    <script  src="js/index.js"></script>
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -25,10 +27,10 @@
       <img class="logo-pic" src="https://cleverboyd.files.wordpress.com/2017/02/bitmoji-20170205010548.png">
       
       <div class="nav flex-column">
-        <a href="#" class="nav-link" data-target="home">Home</a>
-        <a href="#" class="nav-link" data-target="about">About</a>
-        <a href="#" class="nav-link" data-target="portfolio">Portfolio</a>
-        <a href="#" class="nav-link" data-target="contact">Contact</a>
+        <a href="#" class="nav-link animated active" data-target="home">Home</a>
+        <a href="#" class="nav-link animated" data-target="about">About</a>
+        <a href="#" class="nav-link animated" data-target="portfolio">Portfolio</a>
+        <a href="#" class="nav-link animated" data-target="contact">Contact</a>
       </div>
       
       <div class="linkss">
@@ -43,36 +45,106 @@
     
     <div class="col-xs-9 content">
       <div class="content-box animated" id="home">
-        <h1>Hey, I'm Abid</h1>
-        <h2>Progressive / Scientific Instrumentation Engineer / Chemist / UBC MSc Graduate</h2>
-        <h2>PDF Resume</h2>
-        
+        <div class="content-top">
+            <h1>Hey, I'm Abid!</h1>
+        </div>
+        <img class="logo-pic" src="https://cleverboyd.files.wordpress.com/2017/02/bitmoji-20170205010548.png">
+        <div class="content-bottom">
+            <h2>Scientific Instrumentation Engineer | Chemist | UBC MSc Graduate</h2>
+            <h3><a href="#">PDF Resume</a></h3>
+        </div>
       </div>
 
       <div class="hidden content-box animated" id="about">
-        <h1>About</h1>
-        <p>Im a self taught web designer developer based in Vancouver
-I currently work as an engineer for Waters, a scientific instumentaiton company
-          My passion is to solve challenges using my training in both technology and science</p>
+         <div class="content-bottom">
+            <h1>About</h1>
+            <p>Im a self taught web developer based in Vancouver.<br>I currently work as an engineer for <a href="http://www.waters.com">Waters</a>, a scientific instrumentation company<br>My passion is to solve challenges using my training in both technology and science</p>
         
-        <h2>Competencies</h2>
-        <p>List tenchnologies
-        HTML5, CSS3, Javascript, jQuery, Python (Flask), SQL(ite), Bootstrap
-        Git, Photoshop</p>
+            <h2>Competencies</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3 + Bootstrap</li>
+                <li>Javascript + jQuery</li>
+                <li>Python (Flask)</li>
+                <li>SQL(ite)</li>
+                <li>Git</li>
+                <li>Photoshop</li>
+            </ul>
+        </div>
       </div>
 
       <div class="hidden content-box animated" id="portfolio">
-        orem Ipsum 3
+        <h1>Portfolio</h1>
+        <p>Get the source code to all projects on GitHub!</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://static.pexels.com/photos/356040/pexels-photo-356040.jpeg" alt="NistPy app for Desktop">
+                        <span>
+                            <h1>NistPy</h1>
+                            <p>Python library for connecting to NIST Chemistry Webbook</p>
+                        </span>        
+                    </td>
+                    <td>
+                        <img src="https://static.pexels.com/photos/207601/pexels-photo-207601.jpeg" alt="Logo for ChemScripts - various useful scripts for medicinal chemists">
+                        <span>
+                            <h1>ChemScripts</h1>
+                            <p>Python scripts for practicing medicinal chemists, written by a medicinal chemist</p>
+                        </span>
+                    </td>
+                    <td>
+                        <img src="https://i.imgur.com/iBYl4J9.png" alt="Logo for cBase">
+                        <span>
+                            <h1>cBase</h1>
+                            <p>Desktop, web and mobile inventory manager for chemistry labs (in development)</p>
+                        </span>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://static.pexels.com/photos/8394/flight-sky-clouds-fly.jpg" alt="VATSee website">
+                        <span>
+                            <h1>VATSee</h1>
+                            <p></p>
+                        </span>
+                    </td>
+                    <td>
+                        <img src="https://static.pexels.com/photos/289831/pexels-photo-289831.jpeg" alt="Logo for CodeWars">
+                        <span>
+                            <h1>CodeWars</h1>
+                            <p>Small problems solved in CodeWars - in Python</p>
+                        </span>                        
+                    </td>
+                    <td>
+                        <img src="https://i.imgur.com/eSqCWYN.png" alt="Henri Cartier Bresson tribute page">
+                        <span>
+                            <h1>Tribute to HC Bresson</h1>
+                            <p>Tribute to photographer Henri-Cartier Bresson</p>
+                        </span>                        
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
       </div>
 
       <div class="hidden content-box animated" id="contact">
-        Lorem Ipsium 4
+          <h1>Contact</h1>
+          <form action="#">
+            <label for="name">Name (required) <input type="text" id="name" required></label>
+            <label for="email">Email (required) <input type="text" id="email" required></label>
+            <label for="phone">Phone Number <input type="text" id="phone"></label>
+            <label for="message">Message<br>
+                <textarea id="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
+  
     <script  src="js/index.js"></script>
 
 </body>
