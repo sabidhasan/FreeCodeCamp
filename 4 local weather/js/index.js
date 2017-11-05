@@ -1,3 +1,4 @@
+
 function formatAMPM(date) {
 	var hours = date.getHours();
 	var minutes = date.getMinutes();
@@ -38,7 +39,7 @@ $(document).ready(function() {
 			url: url,
 			success: function(data) {
 				$(".weather-city").text(data.name + ', ' + data.sys.country);
-				$(".weather-temp").text(parseInt(data.main.temp));
+				$(".weather-temp").html(parseInt(data.main.temp) + ' &#176;C');
 				$(".weather-cond").text(data.weather[0].description);
 				$(".weather-logo .wi").addClass('wi-day-' + fixWeatherPrefix(data.weather[0].main));
 			},
@@ -48,6 +49,17 @@ $(document).ready(function() {
 });
 
 
-$(".weather-temp").on("click", function() {
-	alert(	'hi');
+$(".weather-temp").click(function() {
+	var unit, val;
+	switch ($(".weather-temp").text().slice(-1)) {
+		case "C":
+			unit = "F";
+			val = parseInt((parseFloat($(".weather-temp").text()) * (9/5) ) + 32);
+			break;
+		case "F":
+			unit = "C";
+			val = parseInt((parseFloat($(".weather-temp").text()) - 32) * (5/9));
+	}
+	
+	$(".weather-temp").html(val + ' &#176;' + unit);
 });

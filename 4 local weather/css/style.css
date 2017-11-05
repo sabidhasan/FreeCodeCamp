@@ -9,7 +9,6 @@ body {display: flex; align-items: center; justify-content: center; margin: 0; ba
 .weather-city {font-size: 2.7em; font-weight: 300; border-bottom: 2px solid #A8CD1B
 ; padding: 5%;}
 .weather-temp {font-size: 4em; margin-top: 4%;}
-.weather-temp::after {content: " \00b0 C"}
 .weather-logo {font-size: 5em;}
 .weather-logo:hover + .weather-cond{ height: 1.2em; }
 .weather-cond {position: relative; top: -1.5em; height: 0; overflow: hidden; transition: height 0.5s ease;}
