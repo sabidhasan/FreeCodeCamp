@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+body, html {height: 100%; background: linear-gradient(180deg, #e3e0cf, #e3e0cf 60%, white); font-family: 'Montserrat', sans-serif;
+}
+.logo {max-width: 12em; display: block; margin: 0 auto}
+
+.col {padding: 1em 0;}
+
+input[type=text] {background: transparent url('https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/search-128.png') no-repeat center; background-size: 50px;  width: 60px; height: 60px; border: none; margin: 0.5em 0; padding: 0 10px 0 90px; border-radius: 50%; cursor: pointer; transition: all 0.8s; font-size: 1.4em;}
+
+input[type=text]:hover {background-color: white;}
+
+input[type=text]:focus {background-position: 10px center; border-radius: 1px; height: 60px; width: 13em; outline: none; border: 2px dotted black; border-radius: 15px;}
+
+.dice {width: 15%; padding: 10px; margin: 0 0 10px 0; transition: background-color 0.2s}
+.dice:hover {border-radius: 50%; background-color: white;}
+form a:hover ~ div {display: block; left: 48%;}
+form a:hover ~ div .one {display: none;}
+
+input[type=text]:hover ~ div {display: block; left: 28%;}
+input[type=text]:hover ~ div .two {display: none;}
+
+
+form {margin: 0; padding: 0; width: 50%; margin: 0 auto; position: relative;}
+form div {display: none; position: absolute; bottom: -50%; width: auto; padding: 0.5em 0.2em; border-radius: 5px; background-color: #e3e0cf; font-weight: bold;}
+
+table {width: 100%; margin: 3em 0 0 0; background-color: #9fa8a3; border-radius: 12px;}
+tr {padding: 0 0 3% 0; display: block; }
+tr {border-bottom: 2px solid #e3e0cf}
+
+tr:last-child {border: none}
+td { width: 85%; display: inline-block; margin: 0 auto; text-align: justify}
+tr td:nth-child(1) {font-weight: bold;}
+tr td:nth-child(1) a {color: #e3e0cf; font-size: 1.6em;}
+
+.fa-search { font-size: 7em; margin: 0.5em 0;}
+.row {margin: 2em 0; min-height: 8em; background-color: #c5d5cb
+}
