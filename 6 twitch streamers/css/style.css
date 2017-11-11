@@ -1,22 +1,35 @@
- body, html {box-sizing: border-box;} 
-  
-.col-xs-12 {background-color: red; border-top: 0.5rem solid black;}
+/* #e6af4b yellow
+#e05038 orange
+#f2cbbc white
+#334431 green */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body, html {box-sizing: border-box; font-family: 'Montserrat', sans-serif; font-size: 13px; background-color: #e6af4b; margin-top: 5px;} 
+a:hover {text-decoration: none;}
+.col-xs-12 {background-color: #e05038; border-top: 0.5rem solid #334431;}
 .row {margin: 0 auto;}
-.container-fluid {width: 50%; min-width: 480px;}
-.title {width: 75%; background-color: green; font-size: 3rem;}
-nav li {list-style-type: none; float: left; display: inline-block; width: calc(100% / 3); text-align: center; padding: 2rem; background-color: salmon; letter-spacing: 0.15rem; margin: 0 0 4rem 0; position: relative; transition: all 0.8s;}
-nav li:not(:nth-child(n+3)) {border-right: 1px solid white;}
-nav li:hover:not(.current) { background-color: red; }
-nav .current:after { content: " "; display: block; width: 0; height: 0; border-top: 15px solid salmon; border-left: 15px solid transparent; border-right: 15px solid transparent; position: absolute; top: 100%; left: calc(100% / 2 - 15px);}
+.container-fluid {width: 55%; min-width: 480px;}
+.title {background-color: #334431; color: #f2cbbc; font-size: 2.5rem; text-align: center; font-weight: bold; letter-spacing: 0.25rem;}
+nav li {list-style-type: none; float: left; display: inline-block; width: calc(100% / 3); text-align: center; padding: 1rem; background-color: #f2cbbc; font-size: 1.4rem; letter-spacing: 0.15rem; margin: 0 0 3rem 0; position: relative; transition: all 0.8s;}
+nav li:not(:nth-child(n+3)) {border-right: 1px solid #334431;}
+nav li:hover:not(.current) {background-color: #334431;}
+nav li:hover:not(.current) a {color: #f2cbbc;}
+nav .current:after { content: " "; display: block; width: 0; height: 0; border-top: 15px solid #f2cbbc; border-left: 15px solid transparent; border-right: 15px solid transparent; position: absolute; top: 100%; left: calc(100% / 2 - 15px);}
 .search-bar form {text-align: center; margin: 0.5rem 0;}
-.search-bar input{width: 90%; margin: 0 auto; border-radius: 50px; outline: none; border: none; padding: 0 1.5rem; font-size: 2rem;}
-table {width: 100%;}
-table img {width: 60%; border: 3px solid black; border-radius: 50%; padding: 2px}
-table tr {display: flex; align-items: center; border-top: 5px solid white; padding-top: 2px; background-color: green;}
+.search-bar input{width: 90%; margin: 0 auto; border-radius: 50px; outline: none; border: none; padding: 0 2.4rem; font-size: 1.6rem; border: 1px solid #334431; background: url('https://image.flaticon.com/icons/png/512/49/49116.png') #f2cbbc no-repeat 0.4rem 0.4rem;
+background-size: 1.5rem}
+table {width: 100%; font-size: 1.3rem;}
+table img {width: 60%; border: 3px solid #f2cbbc; border-radius: 50%; padding: 2px}
+table tr {display: flex; align-items: center; border-top: 5px solid #f2cbbc; padding: 2px 5px;}
+.table-offline {background-color: #334431; color: #f2cbbc;}
+.table-offline a {color: #e6af4b;}
+.table-online {background-color: #e6af4b;}
+.table-online a {color: #e05038;}
 table td {display: inline-block; text-align: center; padding: 1.2rem 0; overflow: hidden; }
 table .table-icon {width: 20%;}
-table .table-name {width: 20%;}
-table .table-status {width: 60%}
+table .table-name {width: 35%;}
+table .table-status {width: 45%}
 table .table-no-streamers {font-weight: bold; font-size: 2.5rem; text-align: center; width: 100%}
-
+.game-title {font-style: italic}
 .highlight {background-color: yellow;}
