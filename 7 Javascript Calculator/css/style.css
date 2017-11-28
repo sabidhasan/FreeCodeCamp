@@ -1,26 +1,24 @@
 body {background: url('https://static.pexels.com/photos/518245/pexels-photo-518245.jpeg'); background-size: cover;}
 
-.top{ color: white; letter-spacing: 0.2rem;}
+.top{ color: white; letter-spacing: 0.2rem; font-size: 2rem; font-weight: bold; margin: 1% 0 2% 0;}
 
-.main {background-color: brown; margin: 2% auto; width: 330px; border-radius: 4%; box-shadow: 10px 10px 5px #000; border: 4px solid darkred; border-right: 8px solid darkred; }
-
-.top {font-size: 2rem; font-weight: bold; margin: 1% 0 2% 0;}
-
+.main {background-color: brown; margin: 2% auto; width: 350px; border-radius: 4%; box-shadow: 10px 10px 5px #000; border: 4px solid darkred; border-right: 8px solid darkred; }
 
 .display-lcd { position: relative; margin: 0 auto; background-color:green; border-top: 20px solid grey; border-bottom: 20px solid grey; border-right: 10px solid grey; border-left: 10px solid grey; display: flex;}
-.display-eights {position: absolute; top: 0; left: 20px; opacity: 0.1;}
-.display-numbers {width: 89%; display: inline-block; transition: opacity 0.3s 0.2s linear;}
-.display-perms {width: 10%; font-size: 1.6rem; display: inline-block}
+.display-eights {position: absolute; top: 0; left: 30px; opacity: 0.1;}
+.display-numbers {width: 78%; display: inline-block; transition: opacity 0.3s 0.2s linear;}
+.display-perms {width: 10%; font-size: 1.5rem; display: inline-block; font-weight: bold; padding: 0 0 0 1%}
 .display-perms span {display: block; text-align: left;}
 .display {margin: 0 0 5% 0; text-align: right; font-size: 3.7rem; font-family: monospace; border: 11px solid black;}
-.display-inactive {opacity: 0.15}
+.display-inactive {opacity: 0.25}
 #display-minus {font-size: 1.5em;}
+.display-power-div {font-size: 1.2rem;}
+#display-power {text-align: right; padding: 7px 0 0 0;}
 
 .buttons {display: flex; align-items: center; justify-content: center; background-color: grey; border: 1px solid black; border-radius: 5px; margin: 0 0 5% 0;}
 .button-col {margin: 3% 1%; width: 18%; float:left;}
-.button {width: 50px; padding: 0; font-size: 2.4rem; font-weight: bold; margin: 10% 0; color: white; border: 5px solid black; box-shadow: 3px 3px 2px darkgrey; outline: none; border-radius: 10%;}
+.button {width: 50px; padding: 0; font-size: 2.4rem; font-weight: bold; margin: 18% 0; color: white; border: 5px solid black; box-shadow: 3px 3px 2px darkgrey; outline: none; border-radius: 10%;}
 
-/*.button:focus {background:green;}*/
 .button:active { box-shadow: -3px -3px 4px darkgrey; outline: none;}
 
 .black-button { background-color: #262728 }
@@ -32,4 +30,4 @@ body {background: url('https://static.pexels.com/photos/518245/pexels-photo-5182
 
 .off {opacity: 0;}
 .off-button {font-size: 2rem; height: 44px}
-.button-tall {height: 98px;}
+.button-tall {height: 107px;}
