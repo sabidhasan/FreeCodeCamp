@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class = "root">
+  <div class = "tit">
+    <h1>Pomodoro Timer</h1>
+  </div>
+  <div class = "settings">
+    <h2>Settings</h2>
+    <div class = "pom-length">
+      <span>Pomodoro Length<br/>(minutes)</span>
+      <div>
+        <button class = "plus-minus setting-pom-length" value = "+">+</button>
+        <div class = "setting-num">
+          <span class = "pom-val"></span>
+          <input type="text" id = "pom-val-input"/>
+        </div>
+        <button class = "plus-minus setting-pom-length" value = "-">-</button>
+      </div>
+    </div>
+    <div class = "break-length">
+      <span>Break Length<br/>(minutes)</span>
+      <div>
+        <button class = "plus-minus setting-break-length" value = "+">+</button>
+        <div class = "setting-num">
+          <span class = "break-val"></span>
+          <input type = "text" id = "break-val-input" />
+        </div>
+        <button class = "plus-minus setting-break-length" value = "-">-</button>
+      </div>
+    </div>
+    <div class = "audio">
+      <span>Play Audio</span>
+      <input type = "checkbox" id = "audio" checked>
+      <label for = "audio"></label>
+      
+    </div>
+  </div>
+  <div class = "controls">
+    <button id = "start" onclick = "startStop()" value = "start">Start</button>
+    <button id = "reset" onclick = "init()">Reset</button>
+  </div>
+  <div class = "timer">
+    <div class = "timer-circle"></div>
+    <div class = "timer-square"></div>
+<!--     <div class = "timer-text"></div> -->
+  </div>
+  <div class = "timer-text"></div>
+  <div class = "pom-status">
+    Not yet started
+  </div>
+  
+  <audio id = "audiocontrol" src = "http://www.soundjay.com/misc/sounds/bell-ringing-01.mp3"/>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>

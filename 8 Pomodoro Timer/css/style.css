@@ -1,0 +1,45 @@
+/* #dddfd4    grey
+#fae596       yellow
+#3fb0ac       light blue
+#173e43       dark blue  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+
+body {background-color : #dddfd4; text-align: center; font-family: 'Montserrat'}
+h1, h2 {color: #fae596;}
+.root {margin: 0 auto; width: 75%; min-width: 250px; background-color: #3fb0ac; border-radius: 9px}
+
+.tit {width: 50%; margin: 0 auto;}
+
+.settings { border: 1px solid #173e43; width: 50%; padding: 0.2rem; margin: 0 auto; border-radius: 6px; background-color: #173e43; color: #dddfd4;}
+.settings > div {border-top: 2px solid #dddfd4; padding-top: 0.7rem}
+.settings button {display: block; margin: 0.2rem auto; border: 2px solid #173e43; outline: 0; background-color: #3fb0ac; padding: 0; font-size: 0.8rem; width: 22px; height: 22px; border-radius: 5px;}
+
+.setting-num input {display: none; width: 1.5rem; font-size: 1.1rem; text-align: center; background-color: #fae596; border: none; outline: none;}
+
+.audio input[type=checkbox] {position: absolute; top: -9999px}
+.audio label::after {display: block; content: " "; width: 20px; height: 20px;  background-color: #3fb0ac; font-size: 1.2rem; color: #173e43; font-weight: bold; border-radius: 5px;}
+.audio input[type=checkbox]:checked + label::after {content: "✓";}
+
+.pom-length, .break-length, .audio {width: 80%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: space-between;}
+input[type=checkbox] {background-color: red;}
+
+.controls {margin-top: 1rem; }
+.controls button {margin: 0 0.8rem; width: 7rem; padding: 0.5rem; border: 3px solid #173e43; font-size: 1.2rem; font-weight: bold; outline: none; background-color: #fae596; border-radius: 7px; color: #173e43}
+
+.timer {margin: 1rem auto; width: 200px; height: 200px; border-radius: 50%; border: 5px solid black; position: relative; overflow: hidden}
+
+.timer-circle {width: 175px; height: 175px; background-color: #173e43; border-radius: 50%; position: relative; top: 6%; left: 6%}
+
+.timer-square {width: 200px; height: 0px; position: absolute; top: 10px; left: 0; transition: 1s all}
+
+.pomodoro {background-color: #3fb0ac}
+.break {background-color: #dddfd4}
+.hidden {display: none}
+
+.pom-status {font-size: 4.5rem; font-weight: 900; padding: 0.8rem; color: #173e43}
+
+.blink {animation: blink 1s step-start infinite}
+
+@keyframes blink {
+  50% {visibility: hidden;}
+}
