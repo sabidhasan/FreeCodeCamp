@@ -56,6 +56,9 @@ h3 {
   /*To prevent board from becoming too small*/
   min-width: 300px;
   height: 300px;
+  //To force inline block children (.squares) to have no white
+  //space between them.
+  font-size: 0;
 }
 
 .square {
@@ -65,7 +68,7 @@ h3 {
   display: inline-block;
   border: 2px solid $black;
   box-sizing: border-box;
-  margin: 0 -4px -5px 0;
+  margin: 0;
   text-align: center;
   overflow: hidden;
   & span {
