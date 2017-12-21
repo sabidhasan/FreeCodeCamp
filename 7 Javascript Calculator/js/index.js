@@ -12,7 +12,8 @@ var Calculator = function() {
   var memory = "";
   //Possible functions;
   var functions = ["*", "/", "+", "-"];
-  
+  //length of display
+  var displayLimit = 9999999999;
 
   //Called when initailizing calcuator, resetting with AC
   function resetCalc() {
@@ -36,9 +37,14 @@ var Calculator = function() {
      $("#display-minus").addClass("display-inactive");       
     }
     
+    //if number too big for display, then make it into scintific notation.
+    //Javascript automatically converts to Sci Not when num ? 1e21
+    if (num > displayLimit) {
+      num = num.toExponential();
+    }
     //if number has "e" in it
     if (num.toString().indexOf("e") !== -1) {
-      //Is it too small of a number?
+      //Is it too small o6f a number?
       if (num.toString().split("e")[1].length > 3) {
         setDisplay("Err");
         errorState = true;
