@@ -1,0 +1,310 @@
+// MIXINS and FONT
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700');
+
+@mixin border {
+  border: 10px solid black;
+}
+@mixin flex-it($justify-content) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+}
+@mixin circle-button($color1, $color2) {
+  border-radius: 50%;
+  outline: none;
+  height: 25px;
+  width: 25px;
+  border: 3px solid black;
+  background: radial-gradient(farthest-corner at 25px 25px, $color1 10%, $color2 100%);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .3);
+}
+@mixin textshadow {
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}  
+
+// General selectors
+body, html {
+  width: 100%;
+  height: 100%;
+  // Center content vertically and horizontally
+  @include flex-it(center);
+  flex-wrap: wrap;
+  // To hide scrolling
+  overflow: hidden;
+  font-family: Ultra, serif;
+  background-color: #654321;
+  background: url('https://pixabay.com/get/e837b40920f4053ed1534705fb0938c9bd22ffd41cb0124997f4c279a2/floor-1256804_1920.jpg')
+}
+* {
+  box-sizing: border-box;
+}
+
+// Contains the app. There are four 2*width divs in this (positioned so that half of each is off screen)
+// Each contains a quarter circle
+.board-wrapper {
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  // Children are display: inline-block, so font-size 0 hides weird spacing
+  font-size: 0;
+  position: relative;
+  // So that when we apply opacity to circles, they appear "highlighted"
+  background-color: white;
+  //So the white only covers the simon board
+  border-radius: 50%;
+  @include border;
+}
+// Each corner
+.corner {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  // Corners contain circles
+  .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    // relative positioning ensures we can move it
+    position: relative;
+    // @include border;
+    outline: 5px black;
+  }
+}
+//It so happens that if the outer div (corner ) needs to be moved left, the inner circle must be moved right, etc.. This is what is happening below
+.move-left {
+  left: -50%;
+  .circle {
+    @extend .move-right;
+  }
+}
+.move-right {
+  left: 50%;
+  .circle {
+    @extend .move-left;
+  }
+}
+.move-up {
+  top: -50%;
+  .circle {
+    @extend .move-down;
+  }
+}
+.move-down {
+  top: 50%;
+  .circle {
+    @extend .move-up;
+  }
+}
+
+// Circle colors
+// @mixin circle-transition {
+//   transition: opacity 0.5s;
+//   transition-delay: 0.2s;
+// }
+.red {
+  background-color:red;
+  box-shadow: 4px 2px 2px 5px rgba(0,0,0,0.5);
+  // @include circle-transition;
+}
+.green {
+  background-color:green;
+  // @include circle-transition;
+}
+.yellow {
+  background-color:yellow;
+  // @include circle-transition;
+}
+.blue {
+  background-color:blue;
+  // @include circle-transition;
+}
+
+// SETTINGS styling
+//This makes the big circle in the center
+.settings {
+  width: 45%;
+  height: 45%;
+  //make it in a circle!
+  border-radius: 50%;
+  @include border;
+  background-color: seagreen;
+  position: absolute;
+  top: 28%;
+  left: 28%;
+  font-size: 2rem;
+  padding: 0;
+  text-align: center;
+}
+//SIMON (R) text
+.settings-title {
+  display: block;
+  //center horizontally
+  margin: 12% auto 4% auto;
+  font-size: 2.6rem;
+  @include textshadow;
+}
+//INTERACTIVE settings (buttons and counter)
+.settings-interactive {
+  @include flex-it(space-around);
+  
+  // For the LED Counter
+  .counter {
+    background-color: darkred;
+    color:#230604;
+    border: 4px solid black;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+    font-family: monospace;
+    letter-spacing: 0.4rem;
+    padding-left: 3%;
+    font-size: 1.5rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .4);
+    // The real and fake counter
+    .settings-count-actual {
+      //force to the right
+      position: absolute;
+      right: 4%;
+    }
+    .off{
+      display: none;
+    }
+    .settings-count-fake {
+      opacity: 0.3;
+    }
+  }
+  
+  //The start button
+  .start-button {
+    @include circle-button(red, darkred);
+    margin-right: 1rem;
+  }
+  .start-button:active {
+    @include circle-button(darkred, red);
+  }
+
+  //The strict button
+   .settings-strict {
+     position: relative;
+     margin-right: 0.5rem;
+     
+     //LED for strict
+     .strict-led {
+       width: 9px;
+       height: 9px;
+       background-color: red;
+       border-radius: 50%;
+       border: 2px solid black;
+       position: absolute;
+       left: 32%;
+       top: -10%;
+     }
+     .strict-led.inactive {
+       background-color: #4F0004;
+     }
+     .strict-button {
+       @include circle-button(yellow, orange);
+     }
+     .strict-button:active {
+       @include circle-button(orange, yellow);
+     }
+  }
+}
+// LABELS for the settings
+.settings-labels {
+  font-size: 0.9rem;
+  @include flex-it(space-around);
+  margin-left: 3%;
+  font-family: 'Archivo Narrow', Helvetica, Arial;
+  font-weight: bold;
+  span {
+    @include textshadow;
+  }
+}
+
+//Holds the ON off slider and labels
+.settings-power-labels {
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+  font-family: 'Archivo Narrow', Helvetica, Arial;
+  margin: 1rem 0;
+  @include flex-it(center);
+  
+  //CSS for Checkbox (hidden)
+  #settings-power {
+    //Hide the check box
+    display: none;
+    &:checked ~ label:before {
+      background-color: red;
+      left: 60%;
+    }
+  }
+  
+  //On and Off labels
+  .on-off-label {
+    margin: 0 0.4rem;
+    @include textshadow;
+  }
+  
+  //Slider
+  #settings-power-label {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 10px;
+    padding: 1%;
+    position: relative;
+    
+    // The "switch"
+    &:before {
+      width: 35%;
+      height: 90%;
+      margin: 2% 5% 0 2%;
+      background-color: skyblue;
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 6px;
+      transition: all .2s ease;
+    }
+  } 
+}
+footer {display: block;}
+
+
+
+//Phone related stuff
+@media screen and (device-width: 360px) and (device-height: 640px) {
+  html {
+     background: none;
+     background-color: #654321;
+  }
+  //Make board, settings smaller
+  .board-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+  .settings {
+    width: 55%;
+    height: 55%;
+    top: 22%;
+    left: 22%;
+  }
+  //Reduce font-size for settings
+  .settings-title {
+    font-size: 1.6rem;
+  }
+  .settings-labels {
+    font-size: 0.55rem;
+  }
+  .settings-power-labels {
+    margin: 0;
+  }
+}

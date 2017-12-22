@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Abid Hasan</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="board-wrapper">
+  <div class="corner move-left move-up"><div class="circle yellow"></div></div>
+  <div class="corner move-right move-up"><div class="circle green"></div></div>
+  <div class="corner move-left move-down"><div class="circle blue"></div></div>
+  <div class="corner move-right move-down"><div class="circle red"></div></div>
+  
+  <div class="settings">
+    <!-- Title for game -->
+    <span class="settings-title">Simon<sup>&reg;</sup></span>
+    
+    <div class="settings-interactive">
+      <!-- LED counter -->
+      <span class="counter">
+        <span class="settings-count-actual off">0</span>
+        <span class="settings-count-fake">00</span>
+      </span>
+      <!-- Start button -->
+      <button class="start-button" id="start-button"></button>
+      <div class="settings-strict">
+        <span class="strict-led inactive"></span>
+        <button class="strict-button" id="strict-button"></button>
+      </div>
+    </div>
+    <div class="settings-labels">
+      <span>COUNT</span>
+      <span>START</span>
+      <span>STRICT</span>
+    </div>
+    <div class="settings-power-labels">    
+      <input type="checkbox" id="settings-power"/>
+      <span class="on-off-label">OFF</span><label id="settings-power-label" for="settings-power"></label><span class="on-off-label">ON</span>
+    </div>
+  </div>
+</div>
+<footer>Test</footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
