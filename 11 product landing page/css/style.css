@@ -1,0 +1,117 @@
+:root {
+  --green: #4abdac;
+  --orange: #fc4a1a;
+  --yellow: #f7b733;
+  --white: #dfdce3;
+}
+body {
+  background: var(--white); font-family: Lato; letter-spacing: .3px;
+}
+
+header {
+  position: fixed; top: 0; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--green); padding: 10px 5px;
+}
+figure {margin: 0; padding: 0;}
+header img {
+  max-width: 50px; margin: 0 15px;
+}
+main {
+  margin-top: 90px;
+}
+a:hover {
+  transition: all .05s;
+  transform: scale(1.1);
+}
+a {
+  color: var(--orange); font-size: 1.2rem; text-decoration: none; font-weight: 100; font-weight: bold;
+}
+#nav-bar {
+  display: flex; align-items: center; justify-content: space-around;
+  flex-basis: 35%;
+}
+header figure {
+  display: flex; align-items: center;
+}
+header figcaption {
+  font-size: 2rem; color: var(--yellow); font-weight: bold; margin: 0 0 0 10px;
+}
+#pricing {
+  display: flex; align-items: stretch; justify-content: space-around; margin: 0 auto; width: 85%; margin: 55px auto; flex-wrap: wrap;
+}
+.pricingtile {
+ flex-basis: 30%; border: 1px solid var(--green); border-radius: 5px; background: rgba(247, 183, 51, 0.2); display: flex; align-items: center; flex-direction: column;
+}
+.pricingtile  >  * {
+  flex-basis: 100%;
+}
+.pricingtile h2 {
+  margin: 8px 0; color: var(--green);
+}
+.cost {
+  font-size: 1.2rem; font-weight: bold;
+}
+#pricing img {
+  max-width: 90%; margin: 5px;
+}
+ul {
+  list-style: none; padding: 0; margin: 0 0 0 55px;
+}
+ul h2 {
+  color: var(--green);
+}
+ul li {
+  margin: 50px 0;  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: auto auto;
+}
+li > * { margin: 8px 0; padding: 0; }
+#contact {
+  text-align: center;
+}
+i {
+  font-size: 3.6rem; grid-row: 1 / 3;
+}
+input {
+  margin: 15px auto; display: block;
+}
+#email {
+  border: 2px solid var(--orange); padding: 5px; font-size: 1.2rem; color: var(--green);
+}
+#submit {
+  font-size: 1.5rem; background: var(--yellow); padding: 8px; border: 2px solid var(--orange); border-radius: 2px; color: var(--green);
+}
+
+@media (max-width: 500px) {
+  header {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header figcaption {
+    font-size: 1.3rem; margin: 0
+  }
+  #header-img {
+    display: none;
+  }
+  main {
+    margin-top: 0;
+  }
+  #nav-bar {
+    width: 100%; justify-content: space-between;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  .nav-link span {
+   display: none;
+  }
+  #pricing {
+    margin: 0; width: 100%;
+    flex-direction: column;
+  }
+  .pricingtile {
+    margin: 15px 0;
+  }
+}
