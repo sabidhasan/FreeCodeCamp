@@ -17,3 +17,8 @@ body {
 .text-bold {
   font-weight: bold;
 }
+
+img {
+  max-width: 100%;
+  display: block; margin: auto;
+}

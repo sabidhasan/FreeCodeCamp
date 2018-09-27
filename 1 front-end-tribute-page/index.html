@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
   <title>Tribute Page</title>
   
   
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
@@ -13,25 +14,27 @@
 </head>
 
 <body>
+
   <!--User Story: I can click on a link that will take me to an external website with further information on the topic.
 -->
 <head>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 
 <body class="bg-danger">
-  <div class="text-center container bg-success">
-    <h1 class="text-bold text-danger">Henri Cartier-Bresson</h1>
+  <div id="main" class="text-center container bg-success">
+    <h1 id="title" class="text-bold text-danger">Henri Cartier-Bresson</h1>
     <p class="lead">French humanist photographer considered a master of candid photography</p>
 
-    <div class="well">
-       <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Henri_Cartier-Bresson.jpg/220px-Henri_Cartier-Bresson.jpg" alt="Henri Cartier Bresson sitting with a camera in a park" class="titlepicture">
-      <h3>Henri Cartier Bresson loved his Leica which gave him the ability to shoot anonymously.<br>He painted the camera black to make it even harder to see by crowds!</h3>
+    <div id="img-div" class="well">
+       <img id = "image" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Henri_Cartier-Bresson.jpg/220px-Henri_Cartier-Bresson.jpg" alt="Henri Cartier Bresson sitting with a camera in a park" class="titlepicture">
+      <figcaption id="img-caption">Henri Cartier Bresson loved his Leica which gave him the ability to shoot anonymously.<br>He painted the camera black to make it even harder to see by crowds!</figcaption>
     </div>
     
     
     <div class="row">
-      <div class="col-md-7">
+      <div id='tribute-info' class="col-md-7">
         <h2 class="text-bold">Timeline</h2>
         <ul class="text-left list-group">
           <li class="list-group-item">Born in Chanteloup-en-Brie, Seine-et-Marne, France, the oldest of five children. </li>
@@ -94,14 +97,16 @@
     <h2 class="text-bold">Famous Quote</h2>
     <blockquote class="blockquote"><p>In photography, the smallest thing can be a great subject. The little human detail can become a leitmotiv.</p><p class="text-right text-bold">- Henri Cartier-Bresson</p></blockquote>
     <h2 class="text-bold">Read More</h2>
-    <p class="text-left">To read more about this guy, go to <a href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson">Wikipedia</a>.</p>
+    <p class="text-left">To read more about this guy, go to <a id="tribute-link" target="_blank" href="https://en.wikipedia.org/wiki/Henri_Cartier-Bresson">Wikipedia</a>.</p>
   </div>
-  
+ 
   <div class="text-center footer">
     Copyright - None exists; this content is in the public domain. Content is from Wikipedia, as is the photograph.
   </div>
 </body>
   
   
+
 </body>
+
 </html>
