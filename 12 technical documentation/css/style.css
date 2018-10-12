@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#navbar {
+  position: fixed; background: white; transition: all 0.5s; max-height: auto; padding: 5px;
+}
+#navbar header {
+  font-size: 1.7rem; font-weight: bold;
+  padding: 15px 0 25px 0;
+}
+#navbar a:hover {
+  transform: scale(1.01); transition: all 0.3s;
+}
+#navbar a {
+  padding: 8px 0; font-size: 1.4rem;
+  color: black; text-decoration: none;
+  border-bottom: 1px solid black;
+  display: flex; grid-column: 1 / -1;
+}
+
+#main-doc {
+  margin-left: 415px; padding: 5px; 
+}
+ul {
+  list-style-type: square;
+}
+ul li {
+  padding: 5px 0;
+}
+.inline-code {
+  background: lightgray; padding: 0 3px; border-radius: 2px; margin: 0 2px;
+}
+code {
+  background: lightgray; display: block;
+  padding: 5px 4px; border-radius: 2px;
+  font-family: monospace; line-height: 1.4rem;
+}
+.indent-0, .indent-1 {
+  display: block;
+}
+.indent-0 {
+  margin-left: 1rem;
+}
+.indent-1 {
+  margin-left: 2.2rem;
+}
+button {
+  display: none; background: none;
+}
+#navbar.closed {
+  max-height: 55px; overflow: hidden; background: white;
+}
+
+@media screen and (max-width: 1200px) {
+  body { flex-wrap: wrap;}
+  #navbar { position: initial; flex-basis: 100%;
+    display: grid; grid-template-columns: 1fr 1fr;
+    background: lightgray; border-radius: 3px;
+  }
+  #main-doc { margin-left: 0;}
+  button {
+    grid-column: 2; grid-row: 1; margin: 15px 15px 0 0; border: 0; padding: 0;
+    font-size: 2.2rem; font-weight: bold;
+    align-self: flex-start; justify-self: flex-end;
+    display: block;
+  }
+}
